@@ -16,7 +16,7 @@
   * classes
 
   ### Demo
-  ![Terminal Recording](/images/terminal-recording.mp4)
+  ![Terminal Recording](/images/terminal-recording.gif)
 
   Deployed Application: [https://kassimariemc.github.io/employee-template-engine/](https://kassimariemc.github.io/employee-template-engine/)
 

@@ -162,10 +162,10 @@ const init = async () => {
       }
     }
 
-    // Render
+    // Render employees array
     const renderedHTML = render(employees);
 
-    // Write to output foloder
+    // Write rendered HTML to output foloder
     fs.writeFile(outputPath, renderedHTML, function(err) {
       if(err) {
         console.log(err);
