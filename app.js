@@ -9,9 +9,11 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const { resolve } = require("path");
 
 
 // Inquirer question functions
+// Get count of each employee type
 const getEmployeeCount = () => {
   const starterQuestions = [
     {
@@ -34,6 +36,7 @@ const getEmployeeCount = () => {
   return inquirer.prompt(starterQuestions);
 }
 
+// Manager questions
 const getManagers = (num) => {
   const totalQuestions = [];
   for (let i = 0; i < num; i++) {
@@ -65,6 +68,7 @@ const getManagers = (num) => {
   return inquirer.prompt(totalQuestions);
 }
 
+// Engineer questions
 const getEngineers = (num) => {
   const totalQuestions = [];
   for (let i = 0; i < num; i++) {
@@ -96,6 +100,7 @@ const getEngineers = (num) => {
   return inquirer.prompt(totalQuestions);
 }
 
+// Intern questions
 const getInterns = (num) => {
   const totalQuestions = [];
   for (let i = 0; i < num; i++) {
@@ -135,6 +140,7 @@ const init = async () => {
 
     const employees = [];
 
+    // Ask questions Num times and then push each individual employee object to employees array
     if(managerNum > 0) {
       const managers = await getManagers(managerNum);
       for (let i = 0; i < managerNum; i++) {
@@ -156,9 +162,16 @@ const init = async () => {
       }
     }
 
-    console.log(employees);
     // Render
     const renderedHTML = render(employees);
+
+    // Write to output foloder
+    fs.writeFile(outputPath, renderedHTML, function(err) {
+      if(err) {
+        console.log(err);
+      }
+      console.log("Success! Your HTML file has been generated into the output folder.");
+    })
 
   } catch(err) {
     console.log(err);
@@ -174,13 +187,3 @@ init();
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
-
-// HINT: each employee type (manager, engineer, or intern) has slightly different
-// information; write your code to ask different questions via inquirer depending on
-// employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
