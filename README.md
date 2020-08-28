@@ -16,7 +16,7 @@
   * classes
 
   ### Demo
-  <iframe src="https://drive.google.com/file/d/1lUA4mpjjt_o5SQJ17uba6QPFEzRfVb4B/preview" width="640" height="480"></iframe>
+  ![Terminal Recording](/images/terminal-recording.mp4)
 
   Deployed Application: [https://kassimariemc.github.io/employee-template-engine/](https://kassimariemc.github.io/employee-template-engine/)
 
