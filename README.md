@@ -35,7 +35,7 @@
 
   ## Usage
 
-  Just run the following command at the root of the cloned file and answer the questions<br><br>`$ node app.js`<br><br>![Terminal View](/images/terminal.png)<br><br> The original /output/team.html file will now be generated as the HTML for your personal Team Page and produce the below. <br><br>![HTML generated](/images/team.png)<br><br>Just copy and paste to your desired project. Include the style.css and backgrnd.jpg if you'd like to mimic the styling.
+  Just run the following command at the root of the cloned file and answer the questions<br><br>`$ node app.js`<br><br>![Terminal View](/images/terminal.png)<br><br> The original /output/team.html file will now be generated as the HTML for your personal Team Page and produce the below. <br><br>![HTML generated](/images/team.png)<br><br>Just copy and paste to your desired project. Include backgrnd.jpg if you'd like to mimic the styling.
 
   ## License
 
